@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Login</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #ebfffd;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+    .login-container {
+        background-color: #DBE9F4;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        text-align: center;
+    }
+    
+    h1 {
+        color: #000000;
+        margin-bottom: 20px;
+    }
+    
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #000000;
+        color: #d1fff7;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #00FF00;
+    }
+    
+    </style>
+</head>
+<body>
+    
+      <div class ="login-contaier">
+          <h1>Login</h1>
+            <form id="LoginForm">
+        <input type="text" placeholder="Masukkan Username" /> <br />      
+        <input type="password" placeholder="Masukkan Password" />   
+        <button type="submit" >Login</button>
+        <div id="error-message" class="error"></div>
+        <p >Belum punya akun ? <a href="#" >Daftar akun</a></p>
+            </form>
+        </div>
+<script> 
+        document.getElementByID("LoginForm").addEventListener("submit",function(event)) {event.preventDefault();
+        
+        // Mendapat nilai username dan password
+        var Username = document.getElementByID('username').value;
+        var Password = document.getElementByID('password').value;
+        var errorMessage = document.getElementByID ('error-message');
+        
+        // Validasi username dan password
+        if(username === '' || password === ''){
+            errorMessage.textContent = 'gaboleh kosong woi !!';
+         } else if (username !== 'Rendy' || password !== '123')
+         errorMessage.TextContent = 'username atau password salah';
+         } else (
+             errorMessage.TextContent = ''
+             alert('sukses login!!');
+        }
+</script>
+
+</body>
+    
+    
+    
+    
+    
+    
